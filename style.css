@@ -1,0 +1,184 @@
+/* ===== PRODUK STYLES ===== */
+:root {
+    --accent: #f39c12;   /* kuning untuk harga */
+    --accent-light: #fef3c7;
+}
+
+.section-bg-light {
+    background: #f4f9f0;
+}
+
+/* Produk Unggulan di index */
+.featured-products {
+    padding: 5rem 0;
+    background: white;
+}
+
+.featured-products .section-header {
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.04),
+                0 8px 10px -6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2ecd9;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+    border-color: #a5d6a7;
+}
+
+.product-card-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #f0f7ed;
+}
+
+.product-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-card-img img {
+    transform: scale(1.05);
+}
+
+.product-card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1b3b17;
+}
+
+.product-desc {
+    color: #5a7152;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.product-price {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.price-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8ba888;
+    margin-bottom: 0.2rem;
+}
+
+.price-value {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+}
+
+.price-bulk .price-value {
+    color: var(--accent);
+}
+
+.price-note {
+    font-size: 0.75rem;
+    color: #8ba888;
+    margin-left: 4px;
+    font-weight: normal;
+}
+
+.btn-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #25d366; /* WhatsApp green */
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-top: auto;
+    font-size: 0.95rem;
+}
+
+.btn-order:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Halaman Produk khusus */
+.produk-hero {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.produk-hero h1 {
+    color: #1b3b17;
+}
+
+.filter-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-info span {
+    background: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 500;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-sm);
+    font-size: 0.9rem;
+}
+
+.filter-info .highlight {
+    background: var(--accent-light);
+    color: #92400e;
+}
+
+/* Responsif produk */
+@media (max-width: 480px) {
+    .product-price {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
